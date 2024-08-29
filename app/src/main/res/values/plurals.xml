@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="fab_click_count">
+        <item quantity="one">FAB clicked once</item>
+        <item quantity="two">FAB clicked twice</item>
+        <item quantity="other">FAB clicked %d times</item>
+    </plurals>
+</resources>

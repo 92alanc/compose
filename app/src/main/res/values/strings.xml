@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Compose</string>
+    <string name="fab_never_clicked">FAB never clicked</string>
+</resources>
