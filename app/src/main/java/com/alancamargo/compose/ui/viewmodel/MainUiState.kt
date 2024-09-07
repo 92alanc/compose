@@ -1,11 +1,8 @@
 package com.alancamargo.compose.ui.viewmodel
 
-data class MainUiState(
-    val text: String = "Untouched screen",
-    val fabClickCount: Int = 0
-) {
+import com.alancamargo.compose.ui.model.UiMyModel
 
-    fun onTextChanged(text: String) = copy(text = text)
+data class MainUiState(val myModelList: List<UiMyModel>? = null) {
 
-    fun onFabClickCountChanged(fabClickCount: Int) = copy(fabClickCount = fabClickCount)
+    fun onListReceived(myModelList: List<UiMyModel>) = copy(myModelList = myModelList)
 }
