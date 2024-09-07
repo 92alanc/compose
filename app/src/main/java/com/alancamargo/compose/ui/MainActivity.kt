@@ -32,10 +32,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import com.alancamargo.compose.R
 import com.alancamargo.compose.extensions.observeFlow
 import com.alancamargo.compose.tools.ToastHelper
 import com.alancamargo.compose.ui.model.UiMyIcon
@@ -142,11 +143,11 @@ class MainActivity : ComponentActivity() {
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
-                .padding(16.dp)
+                .padding(dimensionResource(id = R.dimen.spacing_large))
                 .clickable { viewModel.onListItemClicked(uiMyModel) }
         ) {
             Image(painter = painterResource(id = uiMyModel.icon.iconRes), contentDescription = null)
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(dimensionResource(id = R.dimen.spacing_medium)))
             Text(text = uiMyModel.text, modifier = Modifier.align(Alignment.CenterVertically))
         }
     }
