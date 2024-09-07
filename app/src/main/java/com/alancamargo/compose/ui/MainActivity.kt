@@ -34,6 +34,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.alancamargo.compose.R
@@ -90,10 +91,13 @@ class MainActivity : ComponentActivity() {
             topBar = {
                 TopAppBar(
                     title = {
-                        Text(text = "Compose spike")
+                        Text(text = stringResource(id = R.string.app_name))
                     },
                     navigationIcon = {
                         Icon(
+                            modifier = Modifier.padding(
+                                dimensionResource(id = R.dimen.spacing_medium)
+                            ),
                             imageVector = Icons.AutoMirrored.Default.ArrowBack,
                             contentDescription = "Navigate back"
                         )
